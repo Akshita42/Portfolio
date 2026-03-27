@@ -1,0 +1,109 @@
+/* Achievements Section Container */
+.achievements {
+  background-color: var(--background);
+  padding: 6rem 0;
+}
+
+.achievements-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Base Card Style */
+.achievement-card {
+  background: radial-gradient(circle at top right, rgba(211, 84, 0, 0.1) 0%, transparent 60%), #161A20;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--primary);
+  padding: 2rem 3rem;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px); 
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(211, 84, 0, 0.15);
+  background: radial-gradient(circle at top right, rgba(211, 84, 0, 0.15) 0%, transparent 70%), #1a1e24;
+}
+
+/* Typography */
+.achievement-title {
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  min-width: 250px;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.achievement-card:hover .achievement-title {
+  color: #fff;
+}
+
+.achievement-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.achievement-impact {
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Details Section (Date, Event, App No.) */
+.achievement-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: monospace;
+  font-size: 0.95rem;
+  margin-top: auto;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.achievement-card:hover .achievement-details {
+  color: var(--primary);
+}
+
+.detail-separator {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+/* Minimal Scroll Animation overiding App.css reveal if any */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .achievement-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+}
