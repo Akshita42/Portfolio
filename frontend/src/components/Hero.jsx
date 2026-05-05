@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="hero-content fade-in">
           <p className="greeting">Hi, I'm</p>
           <h1 className="name">Akshita Dhaka</h1>
-          <h2 className="title">ML Systems Engineer</h2>
+          <h2 className="title">ML & Backend Developer</h2>
           <p className="tagline">
             I design and build <span className="highlight">scalable systems</span> powered by <span className="highlight">machine learning</span> and solid engineering.
           </p>
